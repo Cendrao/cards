@@ -1,0 +1,30 @@
+<header>
+  <h1>Cards Application</h1>
+  <div>
+    <p>Aplicação para cadastro e consulta de cards para tradução de palavras e expressões</p>
+  </div>
+</header>
+
+<aside>
+    <h4>Outros serviços interessantes: </h4>
+    <a href="https://translate.google.com.br/?hl=pt-BR" target="_blank">Google Translator</a> <br>
+    <a href="http://tradutor.babylon-software.com/" target="_blank">Babylon</a>
+</aside>
+
+<section>
+  <header>
+    <h4>Cards</h4>
+  </header>
+  <ul class="cards">
+  <% @cards.each do |card| %>
+    <li>
+    <%= link_to card.front, card %>
+    </li>
+  <% end %>
+  </ul>
+</section>
+<hr />
+<footer>
+  <h3>Create a new Card</h3>
+  <%= link_to 'New Card', new_card_url %>
+</footer>
