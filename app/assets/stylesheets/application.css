@@ -47,6 +47,10 @@ a, a:active, a:visited, a:hover {
   text-decoration: none;
  }
 
+ .inline{
+  display: inline-block;
+ }
+
  .content{
    width: 1000px;
    margin: 0 auto;
@@ -54,4 +58,13 @@ a, a:active, a:visited, a:hover {
 
 .cards{
   list-style-type: none;
+}
+
+footer.footer-fixed{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #ccc; 
 }
