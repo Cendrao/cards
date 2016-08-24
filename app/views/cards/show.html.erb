@@ -5,6 +5,7 @@
   <p>Front: <%= @card.front %></p>
   <p>Back: <%= @card.back %></p>
 
-  <%= link_to 'Back' , '/' %>
+<%= link_to 'Edit', edit_card_url( @card )%>
+  <%= link_to 'Back', root_path %>
   
 </article>

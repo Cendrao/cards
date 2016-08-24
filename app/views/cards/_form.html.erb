@@ -1,0 +1,15 @@
+
+<%= form_for(@card) do |f|%>
+  <div class="field">
+    <%= f.label :front %><br />
+    <%= f.text_field :front %>
+  </div>
+  <div class="field">
+    <%= f.label :back %><br />
+    <%= f.text_field :back %>
+  </div>
+
+  <div>
+    <%=f.submit %>
+  </div>
+<% end %>

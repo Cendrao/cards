@@ -10,7 +10,18 @@
 
   <body>
     <div class="content">
-      <%= yield %>
+      <header>
+        <%= image_tag "ruby.png", size: '50x50', class: 'inline' %>
+        <h1 class="inline">Cards Application</h1>
+
+      </header>
+
+      <%= yield %>      
+
     </div>
+
+    <footer class="footer-fixed">
+        <p>Desenvolvido por <%= link_to "@cendrao", "https://github.com/cendrao" , target: "_blank" %> no Campus Code (2016)</p>
+    </footer>
   </body>
 </html>
