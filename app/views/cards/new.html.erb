@@ -1,5 +1,9 @@
 <h3>Create new Card</h3>
 
+<% if @error != nil %>
+    <%= @error %>
+<% end %> 
+
 <section>
 <%=  render 'form' , card: @card  %>
 </section>

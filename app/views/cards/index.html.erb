@@ -4,11 +4,11 @@
   <ul class="cards">
     <% @cards.each do |card| %>
       <li>
-      <%= "Front: #{card.front} -> Back: #{card.back}" %>
+      <%= card.friendly_description %>
         <%= link_to 'Edit', edit_card_path(card) %>
       </li>
     <% end %>
-  </ul> 
+  </ul>
 </section>
 
 <%= link_to 'Back', root_path %>

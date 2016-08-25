@@ -4,8 +4,11 @@
 
   <p>Front: <%= @card.front %></p>
   <p>Back: <%= @card.back %></p>
+  <p>Created at: <%=  default_date @card.created_at %></p>
+  <p>Last change at: <%= default_date @card.updated_at %></p>
 
-<%= link_to 'Edit', edit_card_url( @card )%>
+  <%= link_to 'Edit', edit_card_path( @card )%>
+  <%= link_to 'Delete', @card, method: 'delete'  %>
   <%= link_to 'Back', root_path %>
-  
+
 </article>

@@ -1,4 +1,3 @@
-
   <div>
     <p>Aplicação para cadastro e consulta de cards para tradução de palavras e expressões</p>
   </div>
@@ -16,7 +15,7 @@
   <ul class="cards">
   <% @cards.each do |card| %>
     <li>
-    <%= link_to card.front, card %>
+    <%= link_to card.friendly_description, card %>
     </li>
   <% end %>
   </ul>
