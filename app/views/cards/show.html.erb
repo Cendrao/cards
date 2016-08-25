@@ -2,8 +2,7 @@
 <article>
   <h1>Card</h1>
 
-  <p>Front: <%= @card.front %></p>
-  <p>Back: <%= @card.back %></p>
+  <p>Front: <%= @card.friendly_description %></p>
   <p>Created at: <%=  default_date @card.created_at %></p>
   <p>Last change at: <%= default_date @card.updated_at %></p>
 

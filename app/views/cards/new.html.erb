@@ -1,8 +1,7 @@
+
 <h3>Create new Card</h3>
 
-<% if @error != nil %>
-    <%= @error %>
-<% end %> 
+<p><%= flash[:alert] %> </p>
 
 <section>
 <%=  render 'form' , card: @card  %>

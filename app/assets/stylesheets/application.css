@@ -47,7 +47,9 @@ a, a:active, a:visited, a:hover {
   color: #39c;
   text-decoration: none;
  }
-
+.field{
+  margin-bottom: 1em;
+}
  .inline{
   display: inline-block;
  }
