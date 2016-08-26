@@ -6,6 +6,7 @@ class CardsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
   end
 
   def new
@@ -14,7 +15,7 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(card_params)
-    
+
     if @card.save
       redirect_to @card
     else
@@ -44,7 +45,7 @@ class CardsController < ApplicationController
   end
 
   def card_params
-    params.require(:card).permit(:front, :back)
+    params.require(:card).permit(:front, :back, :author)
   end
 
 end

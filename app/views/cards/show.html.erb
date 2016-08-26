@@ -3,8 +3,32 @@
   <h1>Card</h1>
 
   <p>Front: <%= @card.friendly_description %></p>
+  <p>Created by <%= @card.author %></p>
   <p>Created at: <%=  default_date @card.created_at %></p>
   <p>Last change at: <%= default_date @card.updated_at %></p>
+
+<h3>Comments</h3>
+
+<div>
+  <%= form_for [@card, @comment] do |f| %>
+    <div class="field">
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+    </div>
+    <div class="field">
+      <%= f.label :body, "Comment" %>
+      <%= f.text_field :body %>
+    </div>
+    <%= f.submit 'Send' %>
+    <% end %>
+
+    <ul>
+        <% @card.comments.each do |comment| %>
+          <li> <%= "#{comment.author} says: #{comment.body}" %> </li>
+        <% end %>
+      </ul
+
+</div>
 
   <%= link_to 'Edit', edit_card_path( @card )%>
   <%= link_to 'Delete', @card, method: 'delete'  %>

@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822223933) do
+ActiveRecord::Schema.define(version: 20160826004532) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "front"
     t.string   "back"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "author"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "author"
+    t.text     "body"
+    t.integer  "card_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_comments_on_card_id"
   end
 
 end
